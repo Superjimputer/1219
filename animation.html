@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #0af;
+            animation: go 1s infinite;
+        }
+/*
+        @keyframes go {
+            0% {top:0;left:0;}
+            25% {top:0;left:400px;}
+            50% {top:400px;left:400px;}
+            75% {top:400px;left:0}
+            100% {top:0;left:0;}
+        }
+*/        
+/*
+        @keyframes go {
+            0% {top:0;left:0;}
+            25% {left:400px;top:0;}
+            50% {top:400px;left:400px;}
+            75% {left:0;}
+            100% {top:0;}
+        }
+*/
+/*
+        @keyframes go {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+*/
+        @keyframes go {
+            0% {
+                transform: perspective(700px)rotateX(0)rotateY(0)rotateZ(45deg);
+            }
+            50% {
+                transform: perspective(700px)rotateX(180deg)rotateY(0)rotateZ(0deg);
+            }
+            100% {
+                transform: perspective(700px)rotateX(180deg)rotateY(180deg)rotateZ(45deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+</body>
+
+</html>
